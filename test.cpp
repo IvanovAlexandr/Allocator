@@ -1,21 +1,25 @@
+/*
+    @file test.cpp
+    @brief Test for memory allocator
+    @author Alexandr Ivanov (alexandr.ivanov.1995@gmail.com)
+*/
+
 #include <iostream>
 #include "my_malloc.h"
 
 #define SIZE  128
 
 
-
-
 int main() {
 
     init_malloc(SIZE);
-  //  print_all_mem();31
+    //print_all_mem();
     std::cout << "Hello, World!" << std::endl;
 
-   // print_mem();
+    //print_mem();
     char* ptr = (char *) mem_alloc(14);
 
-  //  print_mem();
+    //print_mem();
     print_all_mem();
     char* ptr2 = (char *) mem_alloc(33);
     print_all_mem();

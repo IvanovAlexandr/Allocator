@@ -1,16 +1,15 @@
-//
-// Created by alexandr on 03.10.16.
-//
-
+/*
+    @file my_malloc.cpp
+    @brief Implement memory allocator
+    @author Alexandr Ivanov (alexandr.ivanov.1995@gmail.com)
+*/
 
 #include <cstdio>
 #include <iostream>
 #include "unistd.h"
 #include "my_malloc.h"
-/** Header structure for linear buffer. */
 
 Buffer buf;
-
 
 void print_all_mem() {
     uint8_t *addr = buf.mem;
@@ -98,7 +97,7 @@ void mem_free(void *addr) {
 }
 
 
-void *mem_realloc(void *addr, uint8_t size){
+void* mem_realloc(void *addr, uint8_t size){
     if (size > 508) {
         return NULL;
     }
